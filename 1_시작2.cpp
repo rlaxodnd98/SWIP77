@@ -24,8 +24,10 @@
 // 4. C++은 C 문법을 지원합니다.
 //  => C의 표준과 C++안에서의 C의 표준은 다릅니다.
 
+#if 0
 #include <stdlib.h>
 #include <stdio.h>
+
 void foo(void) { printf("foo\n"); }
 void goo() { printf("goo\n"); } // OK!
 
@@ -38,4 +40,27 @@ int main()
     // return EXIT_SUCCESS;
     // C++에서는 main 함수의 return을 생략하는 경우,
     // 컴파일러가 자동으로 return 0; 처리해줍니다.
+}
+#endif
+
+// 표준 입출력
+#include <stdio.h>
+
+// stdin(표준 입력 장치)
+// stdout(표준 출력 장치)
+// stderr(표준 에러 장치)
+
+// UNIX
+// => 모든 것이 파일입니다.
+// open        일반 파일
+// read  ----> 디바이스 특수 파일
+// write       네트워크 소켓 파일
+// close
+
+int main()
+{
+    // printf("Hello, C++\n");
+    fprintf(stderr, "Hello, C++");
+    while (1) {
+    }
 }
