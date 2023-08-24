@@ -59,8 +59,8 @@ int main()
 
 int main()
 {
-    // printf("Hello, C++\n");
-    fprintf(stderr, "Hello, C++");
+    printf("Hello, C++");
+    // fprintf(stderr, "Hello, C++");
     while (1) {
     }
 }
