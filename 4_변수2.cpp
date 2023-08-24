@@ -61,13 +61,13 @@ int main()
     if (d > INT_MAX || d < INT_MIN) {
         cout << "Overflow" << endl;
     } else {
-        int n = { (int)d };
+        int n = { (int)d }; // Copy Initialization
     }
 
     long long l = 100LL;
     if (l > INT_MAX || l < INT_MIN) {
         cout << "Overflow" << endl;
     } else {
-        int n = { (int)l };
+        int n { (int)l }; // Direct Initialization
     }
 }
