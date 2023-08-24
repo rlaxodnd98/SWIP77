@@ -16,6 +16,7 @@ int main(void)
 }
 #endif
 
+#if 0
 int main(void)
 {
     char str1[32] = "hello";
@@ -24,3 +25,10 @@ int main(void)
 
     // str2[0] = 'x'; /* 미정의 동작 */
 }
+#endif
+
+// void foo(void) { }
+// 0000000000000000 T _foo
+
+void foo(int a, int b) { }
+// 0000000000000000 T _foo
