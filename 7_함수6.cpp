@@ -32,7 +32,7 @@ int gcd(double a, double b) = delete;
 
 int main()
 {
-    cout << gcd(3.14, 5.5) << endl;
+    // cout << gcd(3.14, 5.5) << endl; /* Compiler Error */
 
     cout << gcd(15, 5) << endl;
     cout << gcd(15, 24) << endl;
