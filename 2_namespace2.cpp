@@ -69,6 +69,7 @@ int main()
 }
 #endif
 
+#if 0
 #include <iostream>
 // using namespace std;
 // using std::count;
@@ -95,3 +96,4 @@ int main()
     // 이름 충돌로 인해서, 컴파일러는 어떤 count를 선택할지
     // 알 수 없습니다.
 }
+#endif
