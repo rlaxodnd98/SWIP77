@@ -39,6 +39,8 @@ void foo(T1 a, T2 b) // 값 파라미터
 {
 }
 
+// C++ 표준 라이브러리, STL(Standard Template Library)
+
 int main()
 {
     // 템플릿은 명시적으로 타입을 전달할 수 있습니다.
