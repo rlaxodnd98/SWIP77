@@ -24,7 +24,7 @@
 // 4. C++은 C 문법을 지원합니다.
 //  => C의 표준과 C++안에서의 C의 표준은 다릅니다.
 
-#if 0
+#if 1
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -27,7 +27,7 @@ int main()
 
 // 3. namespace를 사용하면 프로그램의 각 요소를
 //    관련된 요소끼리 그룹화할 수 있습니다.
-#if 0
+#if 1
 namespace video {
 namespace mp3 {
     void Play() { }
@@ -60,3 +60,5 @@ int main()
 {
     std::printf("Hello, C++\n");
 }
+
+// https://devdocs.io
