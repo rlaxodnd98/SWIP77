@@ -13,8 +13,18 @@ public:
     Stack(int size);
     Stack();
 
-    void Push(int n);
-    int Pop();
+    inline void Push(int n);
+    inline int Pop();
 };
+
+void Stack::Push(int n)
+{
+    buff[top++] = n;
+}
+
+int Stack::Pop()
+{
+    return buff[--top];
+}
 
 #endif

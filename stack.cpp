@@ -19,6 +19,8 @@ Stack::Stack()
     top = 0;
 }
 
+// 인라인 함수의 구현은 헤더를 통해서 제공해야 합니다.
+#if 0
 void Stack::Push(int n)
 {
     buff[top++] = n;
@@ -28,3 +30,4 @@ int Stack::Pop()
 {
     return buff[--top];
 }
+#endif
