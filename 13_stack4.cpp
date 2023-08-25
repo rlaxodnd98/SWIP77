@@ -12,7 +12,6 @@ using namespace std;
 
 class Stack {
 private:
-    // 멤버 데이터(상태) => property
     int buff[10];
     int top;
 
@@ -34,9 +33,6 @@ public:
     }
 };
 
-// 추상화
-// => 문제를 해결하는데, 필요한 요소만 추리는 과정
-
 int main()
 {
     Stack s;
@@ -45,8 +41,6 @@ int main()
     s.Push(10);
     s.Push(20);
     s.Push(30);
-
-    // s.top = 10; /* 미정의 동작 */
 
     cout << s.Pop() << endl;
     cout << s.Pop() << endl;
