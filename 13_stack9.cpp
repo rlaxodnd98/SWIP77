@@ -4,6 +4,7 @@
 // 템플릿 기반의 스택이 제공됩니다.
 //  : STL(Standard Template Library)
 
+#if 0
 #include <iostream>
 using namespace std;
 
@@ -26,4 +27,34 @@ int main()
     s.pop();
     cout << s.top() << endl;
     s.pop();
+}
+#endif
+
+#include <iostream>
+using namespace std;
+
+#include <vector>
+
+// 정적 배열
+//  : 크기가 고정된 배열
+// 동적 배열 => vector
+// : 연속된 메모리, 데이터가 동적으로 추가될 수 있습니다
+// 연결 리스트 => list
+// : 논리적으로 연속되는 메모리
+
+int main()
+{
+    // int x[5] = { 10, 20, 30, 40, 50 };
+    vector<int> x = { 10, 20, 30, 40, 50 };
+    x[0] = 10;
+    x[4] = 1000;
+    cout << x[0] << endl;
+
+    x.push_back(100);
+    x.push_back(200);
+    x.push_back(300);
+
+    for (auto e : x) {
+        cout << e << endl;
+    }
 }
