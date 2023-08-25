@@ -66,6 +66,27 @@ int main()
 
 // p3 [*]----------> [[int][int][int]]
 
+#if 0
 int main()
 {
+}
+#endif
+
+// 정수
+// : C/C++은 정수 타입의 크기가 표준으로 정의되어 있지 않습니다.
+//   정의되어 있는 것은 char(1바이트) 타입의 크기만 정해져 있습니다.
+
+//  signed char -> short -> int -> long -> long long
+//       1           2       4                 8
+//                              MSVC: 4
+//                               GCC: 8
+//  - C/C++
+//    stdint.h / cstdint
+#include <cstdint>
+int main()
+{
+    int8_t a;
+    int16_t b;
+    int32_t c;
+    int64_t d;
 }
