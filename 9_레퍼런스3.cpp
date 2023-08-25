@@ -44,7 +44,6 @@ int main()
 // 3. C++11, rvalue reference
 //  : rvalue만 참조할 수 있습니다.
 //  - int&&
-
 void foo(int& r)
 {
     cout << "lvalue" << endl;
