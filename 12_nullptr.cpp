@@ -37,3 +37,10 @@ int main()
     // NULL은 포인터와 정수 타입 간의 모호성 오류의 원인이 됩니다.
 }
 #endif
+
+//  Effective C++
+//  More Effective C++
+//  Effective STL
+// --------------- C++98/03
+
+//  Effective Modern C++ - C++11/14
