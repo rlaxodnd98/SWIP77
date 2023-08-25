@@ -2,6 +2,8 @@
 
 // 이미 C++ 표준 라이브러리에 모든 타입에 대해서 사용할 수 있는
 // 템플릿 기반의 스택이 제공됩니다.
+//  : STL(Standard Template Library)
+
 #include <iostream>
 using namespace std;
 
