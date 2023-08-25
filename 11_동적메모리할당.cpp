@@ -60,7 +60,6 @@ int main()
 // 6. new int[size]를 통해 연속된 메모리를 할당할 수 있습니다.
 // 7. 연속된 메모리를 해지할 때는 delete가 아닌 delete[] 연산자를
 //    이용해야 합니다.
-
 int main()
 {
 
