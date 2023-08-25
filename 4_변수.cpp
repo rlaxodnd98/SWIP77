@@ -8,8 +8,8 @@ using namespace std;
 // 2) union
 // 3) enum
 struct complex {
-    //     -------
-    //     구조체 태그
+    // -------
+    //  구조체 태그
 
     int re;
     int im;

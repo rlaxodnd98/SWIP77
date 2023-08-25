@@ -5,7 +5,10 @@ using namespace std;
 // C에서는 함수 호출의 오버헤드를 제거하기 위해서,
 // 매크로 함수를 이용합니다.
 #if 0
-int square(int x) { return x * x; }
+int square(int x)
+{
+    return x * x;
+}
 
 int main()
 {

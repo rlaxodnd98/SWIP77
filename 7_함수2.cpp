@@ -22,8 +22,7 @@ int main()
 //   : Name Mangling
 //   => 컴파일 시 함수 심볼의 이름이 함수의 식별자와 인자 정보에
 //      의해 결정됩니다.
-//   => extern "C"를 통해서 C++에서 C 컴파일러로 빌드된 함수를 호출하거나,
-//      C++ 컴파일러로 빌드된 함수를 C 프로그램에서 호출할 수 있습니다.
+//   => extern "C"를 통해서 C++에서 C 컴파일러로 빌드된 함수를 호출하거나, C++ 컴파일러로 빌드된 함수를 C 프로그램에서 호출할 수 있습니다.
 
 int square(int x) { return x * x; }
 double square(double x) { return x * x; }

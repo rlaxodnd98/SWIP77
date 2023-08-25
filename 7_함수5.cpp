@@ -21,7 +21,10 @@ long long square(long long x) { return x * x; }
 //   2) 템플릿은 다른 소스 파일로 분리가 불가능합니다.
 //      헤더를 통해서 모든 구현이 제공되어야 합니다.
 
-#if 0
+//   3) 컴파일 시간에 코드를 생성하기 때문에,
+//      컴파일 시간이 증가될 수 있습니다.
+
+#if 1
 // 함수 템플릿
 template <typename TYPE>
 inline TYPE square(TYPE x) { return x * x; }
