@@ -14,17 +14,17 @@ using namespace std;
 //      2) private: 외부에서 접근이 불가능하고, 오직 멤버 함수를 통해서만 접근이 가능합니다.
 
 //    => struct의 기본 접근 지정자는 public 입니다.
-//       class의 기본 접근 지정자지는 private 입니다.
+//       class의 기본 접근 지정자는 private 입니다.
 //     : 객체를 위한 타입은 class로 만들어야 한다.
 
 class Stack {
 private:
-    // 멤버 데이터(상태)
+    // 멤버 데이터(상태) => property
     int buff[10];
     int top;
 
 public:
-    // 멤버 함수
+    // 멤버 함수(행위) => method
     void Init()
     {
         top = 0;
@@ -41,6 +41,9 @@ public:
     }
 };
 
+// 추상화
+// => 문제를 해결하는데, 필요한 요소만 추리는 과정
+
 int main()
 {
     Stack s;
@@ -50,7 +53,7 @@ int main()
     s.Push(20);
     s.Push(30);
 
-    s.top = 10; /* 미정의 동작 */
+    // s.top = 10; /* 미정의 동작 */
 
     cout << s.Pop() << endl;
     cout << s.Pop() << endl;
