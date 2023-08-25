@@ -29,7 +29,6 @@ public:
 int main()
 {
     // Point* pt = new Point[3];
-
     Point* pt1 = new Point[3] {
         { 10, 20 },
         {},
