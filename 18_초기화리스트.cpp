@@ -64,10 +64,56 @@ public:
     }
 };
 
+#if 0
+class Point {
+    int x;
+    int y;
+
+public:
+    Point(int a, int b)
+        : x { a }
+        , y { b }
+    {
+    }
+};
+
 int main()
 {
     int r = 10;
     const int c = 42;
 
     Sample s(r, c);
+}
+#endif
+
+// 주의: 초기화 리스트에서 멤버 데이터가 초기화되는 순서는
+//      "멤버 데이터가 선언된 순서"대로 초기화됩니다.
+class Point {
+    int x;
+    int y;
+
+public:
+#if 0
+    Point(int a)
+        : y(a)
+        , x(y + 10)
+    {
+    }
+#endif
+    Point(int a)
+        : x(a)
+        , y(x + 10)
+    {
+    }
+
+    void Print()
+    {
+        cout << x << ", " << y << endl;
+    }
+};
+
+int main()
+{
+    Point pt { 10 };
+    pt.Print();
 }
