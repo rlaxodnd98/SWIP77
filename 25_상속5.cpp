@@ -49,6 +49,9 @@ public:
         , age_ { age }
     {
     }
+
+    string GetName() const { return name_; }
+    int GetAge() const { return age_; }
 };
 
 class Student : public User {
@@ -63,6 +66,8 @@ public:
         , score_ { score }
     {
     }
+
+    int GetScore() const { return score_; }
 };
 
 class Teacher : public User {
@@ -74,6 +79,8 @@ public:
         , major_ { major }
     {
     }
+
+    string GetMajor() const { return major_; }
 };
 
 int main()
