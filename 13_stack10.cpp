@@ -218,6 +218,11 @@ public:
     // 해결 방법
     //  => 제거하는 연산과 참조하는 연산을 분리해야 합니다.
     TYPE& Top() { return buff[top - 1]; }
+
+    // 비상수 멤버함수와 상수 멤버함수를 동시에 제공하는 경우
+    // => 내부의 멤버 데이터를 참조로 반환할 때
+    const TYPE& Top() const { return buff[top - 1]; }
+
     void Pop() { --top; }
 #if 0
     
