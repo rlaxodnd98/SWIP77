@@ -55,6 +55,9 @@ class Student : public User {
     int score_;
 
 public:
+    // - 부모의 생성자를 초기화하는데 필요한 데이터를
+    //   인자로 전달받아야 합니다.
+    // - 부모의 멤버는 부모의 생성자를 통해서 초기화해야 합니다.
     Student(const string& name, int age, int score)
         : User { name, age }
         , score_ { score }
