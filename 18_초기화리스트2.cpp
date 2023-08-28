@@ -50,7 +50,7 @@ public:
     User() { }
 
     // 1) 초기화리스트
-    User(string s, int n)
+    User(const string& s, int n)
         : name { s }
         , age { n }
     {

@@ -169,7 +169,7 @@ int main()
 }
 #endif
 
-#if 0
+#if 1
 template <typename TYPE>
 class Stack {
     TYPE* buff;
@@ -193,7 +193,23 @@ public:
         delete[] buff;
     }
 
-    void Push(TYPE n)
+    // void Push(TYPE n)
+    //  - TYPE -> int
+    //  : void Push(int n)
+
+    //  - TYPE -> string
+    //  : void Push(string n)
+
+    // void Push(const TYPE& n)
+    //  - TYPE -> int
+    //   : void Push(const int& n)
+    //  - TYPE -> string
+    //   : void Push(const string& n)
+    //  => 템플릿 인자를 전달 받는 경우, call by value가 아닌
+    //     const& 형태를 사용해야 합니다.
+    //     객체 타입에 대해서 불필요한 복사생성/소멸의 비용을
+    //     제거할 수 있습니다.
+    void Push(const TYPE& n)
     {
         buff[top++] = n;
     }
@@ -218,6 +234,7 @@ int main()
 }
 #endif
 
+#if 0
 #include <stack>
 
 int main()
@@ -237,3 +254,4 @@ int main()
     cout << s.top() << endl;
     s.pop();
 }
+#endif
