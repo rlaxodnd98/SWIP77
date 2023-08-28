@@ -16,7 +16,8 @@ public:
 //    call by value대신 const&를 사용합니다.
 //   "불필요한 복사 생성/소멸 비용의 제거를 위해서"
 
-void foo(const Sample& s) // - Sample(const Sample&)
+void foo(const Sample& s)
+// void foo(Sample s) // - Sample(const Sample&)
 {
 } // ~Sample()
 
