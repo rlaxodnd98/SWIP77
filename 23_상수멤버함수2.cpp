@@ -76,6 +76,9 @@ int main()
     Rect rect { 10, 20 };
     Point& pt = rect.GetLeftTop();
     pt.Move(100, 200);
+
+    rect.GetLeftTop().Move(100, 200);
+
     rect.Print();
 
     foo(rect);
