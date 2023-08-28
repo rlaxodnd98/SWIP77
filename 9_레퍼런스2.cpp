@@ -27,7 +27,7 @@ int main()
 {
     int x = 10;
     // Increment1(x); // Call by value
-    // Increment2(&x); // Call by pointer
+    // Increment2(&x); // Call by pointer(address)
     Increment2(NULL);
     Increment3(x); // Call by reference
 
