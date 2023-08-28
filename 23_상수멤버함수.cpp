@@ -22,12 +22,17 @@ public:
     // * 상수 멤버 함수는 멤버 데이터를 const 취급합니다.
     // * 멤버 함수를 설계할 때, 내부의 상태(멤버 데이터)를 변경하지 않을 경우
     //   반드시 상수 멤버 함수로 만들어야 합니다.
-
     void Print() const // 상수 멤버 함수
     {
         // x_ = 10;
         // y_ = 20;
         cout << x_ << ", " << y_ << endl;
+    }
+
+    void Move(int ax, int ay)
+    {
+        x_ += ax;
+        y_ += ay;
     }
 };
 
@@ -53,6 +58,7 @@ int main()
 
     Point pt { 10, 20 };
     pt.Print();
+    pt.Move(10, 20);
 
     foo(pt);
 }
