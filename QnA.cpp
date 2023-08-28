@@ -82,6 +82,7 @@ int main()
 //                               GCC: 8
 //  - C/C++
 //    stdint.h / cstdint
+#if 0
 #include <cstdint>
 int main()
 {
@@ -89,4 +90,42 @@ int main()
     int16_t b;
     int32_t c;
     int64_t d;
+}
+#endif
+
+// 구조체의 크기는 멤버 데이터의 총합과 같지 않을 수 있습니다.
+// => 구조체 정렬
+// => 구조체 내부의 패딩은 컴파일러와 플랫폼에 따라 다르게 생성됩니다.
+//  "파일에 구조체의 메모리를 저장하거나,
+//   네트워크로 전송하는 경우 패딩을 제거해야 합니다"
+//   : packing
+//     - Compiler 확장 명령
+#pragma pack(1)
+struct AAA {
+    int a;
+    char b;
+    double c;
+};
+// |aa|aa|aa|aa|bb|--|--|--|cc|cc|cc|cc|cc|cc|cc|cc|
+
+struct BBB {
+    char a;
+    double b;
+    int c;
+};
+// |aa|--|--|--|--|--|--|--|bb|bb|bb|bb|bb|bb|bb|bb|cc|cc|cc|cc|--|--|--|--|
+
+// |--|--|--|aa|aa|aa|aa|--|--|--|--|dd|dd|dd|dd|dd|...
+// 5  6  7  8  9  10 11 12 13 14 15 16
+
+int main()
+{
+    int a;
+    // 4바이트 정렬
+
+    double b;
+    // 8바이트 정렬
+
+    cout << sizeof(AAA) << endl;
+    cout << sizeof(BBB) << endl;
 }
