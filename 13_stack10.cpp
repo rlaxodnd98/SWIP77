@@ -214,10 +214,18 @@ public:
         buff[top++] = n;
     }
 
+    // 참조로 반환이 불가능합니다.
+    // 해결 방법
+    //  => 제거하는 연산과 참조하는 연산을 분리해야 합니다.
+    TYPE& Top() { return buff[top - 1]; }
+    void Pop() { --top; }
+#if 0
+    
     TYPE Pop()
     {
         return buff[--top];
     }
+#endif
 };
 
 int main()
@@ -228,9 +236,14 @@ int main()
     s1.Push(2.14);
     s1.Push(3.15);
 
-    cout << s1.Pop() << endl;
-    cout << s1.Pop() << endl;
-    cout << s1.Pop() << endl;
+    cout << s1.Top() << endl;
+    s1.Pop();
+
+    cout << s1.Top() << endl;
+    s1.Pop();
+
+    cout << s1.Top() << endl;
+    s1.Pop();
 }
 #endif
 
