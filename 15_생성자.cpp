@@ -35,9 +35,9 @@ public:
 
 int main()
 {
-    // Point pt { 10, 20 }; // -> Point(int, int)
+    Point pt1 { 10, 20 }; // -> Point(int, int)
 
-    Point pt;
+    Point pt2; // Error!
 }
 #endif
 
@@ -65,5 +65,5 @@ int main()
 {
     Point pt1 { 10, 20 }; // -> Point(int, int)
 
-    Point pt2;
+    Point pt2; // Point()
 }
