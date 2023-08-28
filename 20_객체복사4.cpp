@@ -38,6 +38,6 @@ int main()
     User user { "Tom", 42 };
     user.Print();
 
-    User other { user };
-    other.Print();
+    // User other { user };
+    // other.Print();
 }
