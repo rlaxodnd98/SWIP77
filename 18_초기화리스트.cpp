@@ -100,13 +100,14 @@ public:
     {
     }
 #endif
+    // 클래스의 멤버 데이터의 순서대로 초기화리스트를 작성해야 합니다.
     Point(int a)
         : x(a)
         , y(x + 10)
     {
     }
 
-    void Print()
+        void Print()
     {
         cout << x << ", " << y << endl;
     }
