@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+// 4) 소유권 이전
 class User {
     char* name;
     int age;

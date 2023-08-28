@@ -13,6 +13,7 @@ class User {
     int age;
 
     User(const User& rhs) = delete;
+    User(User&& rhs) = delete;
 
 public:
     User(const char* s, int n)
