@@ -18,7 +18,8 @@ public:
 class Derived : public Base {
 public:
     Derived()
-        : Base(42) // 부모의 기본 생성자를 호출하는 코드를 컴파일러가 삽입
+        // : Base(42) // 부모의 기본 생성자를 호출하는 코드를 컴파일러가 삽입
+        : Base { 42 }
     {
         cout << "Derived()" << endl;
     }
