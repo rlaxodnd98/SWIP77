@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+// 핵심
+// : 멤버 함수는 호출할 때, 첫번째 인자로 객체의 주소가 전달됩니다.
+//   전달된 객체의 주소는 멤버 함수 안에서 this를 통해서 접근할 수 있습니다.
+
 class Point {
     int x;
     int y;
