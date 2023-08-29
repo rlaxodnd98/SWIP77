@@ -18,6 +18,11 @@ using namespace std;
 // 4. 자식이 재정의하는 모든 모든 멤버 함수는 반드시 가상 함수 이어야 한다.
 // 5. 반드시 부모의 소멸자는 가상 이어야 합니다.
 
+// 6. 다형성은 OCP를 만족합니다.
+//   : OCP(Open Close Principle, 개방 폐쇄 원칙)
+//     확장에는 열려있고, 수정에는 닫혀 있어야 한다.
+//   "새로운 기능이 추가되어도, 기존 코드는 수정되면 안된다."
+
 class Shape {
 public:
     virtual ~Shape() { }
@@ -35,6 +40,11 @@ public:
     void Draw() const override { cout << "Circle Draw" << endl; }
 };
 
+class Triangle : public Shape {
+public:
+    void Draw() const override { cout << "Triangle Draw" << endl; }
+};
+
 int main()
 {
     vector<Shape*> shapes;
@@ -47,11 +57,20 @@ int main()
             shapes.push_back(new Rect);
         } else if (cmd == 2) {
             shapes.push_back(new Circle);
-        } else if (cmd == 9) {
+        } else if (cmd == 3) {
+            shapes.push_back(new Triangle);
+        }
+
+        else if (cmd == 9) {
 
             for (auto e : shapes) {
                 e->Draw();
+                //            Rect  --> Rect::Draw()
+                // Draw() --> Circle --> Circle::Draw()
+                //            Triangle -> Triangle::Draw()
+                // => 다형성(Polymorphism)
             }
+
         } else if (cmd == 0) {
             break;
         }
