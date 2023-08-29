@@ -34,13 +34,12 @@ public:
 // protected 상속과 private 상속은 부모와 자식간의 is-a 관계가
 // 성립되지 않습니다.
 //  : Upcasting이 불가능합니다.
-
 class User : private Base {
 };
 
 int main()
 {
     User user;
-    user.GetName();
-    user.GetAge();
+    // user.GetName();
+    // user.GetAge();
 }
