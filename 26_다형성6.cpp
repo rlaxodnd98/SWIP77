@@ -21,7 +21,7 @@ public:
     // void Start() override { cout << "Avante Start" << endl; }
 };
 
-class Avante2 : public Avante { };
+// class Avante2 : public Avante { };
 
 int main()
 {
