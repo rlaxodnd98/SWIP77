@@ -22,6 +22,12 @@ public:
         // y = b;
         this->y = b;
     }
+
+    // 객체의 주소가 전달되지 않습니다.
+    // 일반함수와 동일합니다.
+    static void foo(int a, int b)
+    {
+    }
 };
 
 void Set(int a, int b)
@@ -30,6 +36,13 @@ void Set(int a, int b)
 
 int main()
 {
+    Point::foo(10, 20);
+    /*
+        mov     edx, 200
+        mov     ecx, 100
+        call    static void Point::foo(int,int)
+    */
+
     Set(10, 20);
     /*
         mov     edx, 20
