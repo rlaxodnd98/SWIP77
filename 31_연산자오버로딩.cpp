@@ -29,7 +29,21 @@ public:
     // 2) 일반 함수
     // friend Point Add(const Point& lhs, const Point& rhs);
     friend Point operator+(const Point& lhs, const Point& rhs);
+
+    Point operator-(const Point& rhs) const
+    {
+        Point result { x - rhs.x, y - rhs.y };
+        return result;
+    }
+
+    friend Point operator-(const Point& lhs, const Point& rhs);
 };
+
+Point operator-(const Point& lhs, const Point& rhs)
+{
+    Point result { lhs.x - rhs.x, lhs.y - rhs.y };
+    return result;
+}
 
 // Point Add(const Point& lhs, const Point& rhs)
 Point operator+(const Point& lhs, const Point& rhs)
@@ -64,8 +78,10 @@ int main()
 
     // 2) 일반 함수
     //  Point result1 = operator+(pt1, pt2);
-
     result1.Print();
+
+    Point result2 = pt1 - pt2;
+    result2.Print();
 
     // pt1 + pt2
     // 1) 멤버 함수
