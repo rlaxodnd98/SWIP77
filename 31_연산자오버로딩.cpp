@@ -17,10 +17,34 @@ public:
     {
         cout << "(" << x << ", " << y << ")" << endl;
     }
+
+    // 멤버 함수
+    Point Add(const Point& rhs) const
+    {
+        Point result { x + rhs.x, y + rhs.y };
+        return result;
+    }
+
+    friend Point Add(const Point& lhs, const Point& rhs);
 };
+
+Point Add(const Point& lhs, const Point& rhs)
+{
+    Point result { lhs.x + rhs.x, lhs.y + rhs.y };
+    return result;
+}
 
 int main()
 {
     Point pt1 { 10, 20 };
     Point pt2 { 100, 200 };
+
+    // pt1 + pt2
+    // 1) 멤버 함수
+    Point result1 = pt1.Add(pt2);
+    result1.Print();
+
+    // 2) 일반 함수
+    Point result2 = Add(pt1, pt2);
+    result2.Print();
 }
