@@ -80,3 +80,10 @@ int main()
         delete e;
     }
 }
+
+// UNIX/Linux: 모든 것은 파일입니다.
+//  : VFS(Virtual File System)
+//  Write() --> 일반 파일 -> 파일에 저장
+//            디바이스 파일 -> 디바이스 제어
+//            네트워크 파일 -> 패킷 전송
+//              .....
