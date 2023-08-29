@@ -13,12 +13,8 @@ class Shape {
 public:
     virtual ~Shape() { }
 
-    virtual Shape* Clone() const
-    {
-        return new Shape(*this);
-    }
-
-    virtual void Draw() const { cout << "Shape Draw" << endl; }
+    virtual Shape* Clone() const = 0;
+    virtual void Draw() const = 0;
 };
 
 class Rect : public Shape {
