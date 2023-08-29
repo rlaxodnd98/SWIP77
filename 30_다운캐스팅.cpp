@@ -18,8 +18,8 @@ int main()
 {
     Animal a;
     Dog d;
-    // Animal* p = &d;
-    Animal* p = &a;
+    Animal* p = &d;
+    // Animal* p = &a;
 
     // p가 Dog라면,
     // 다운 캐스팅을 수행해야 합니다.
