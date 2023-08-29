@@ -18,13 +18,14 @@ public:
         cout << "(" << x << ", " << y << ")" << endl;
     }
 
-    // 멤버 함수
+    // 1) 멤버 함수
     Point Add(const Point& rhs) const
     {
         Point result { x + rhs.x, y + rhs.y };
         return result;
     }
 
+    // 2) 일반 함수
     friend Point Add(const Point& lhs, const Point& rhs);
 };
 
@@ -36,6 +37,10 @@ Point Add(const Point& lhs, const Point& rhs)
 
 int main()
 {
+    int a = 10;
+    int b = 20;
+    int r = a + b;
+
     Point pt1 { 10, 20 };
     Point pt2 { 100, 200 };
 
