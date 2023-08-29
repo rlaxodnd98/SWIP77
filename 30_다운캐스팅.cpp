@@ -72,3 +72,9 @@ int main()
 
     //  "실패 가능성이 존재하는 다운 캐스팅에서 이용합니다."
 }
+
+// C++ 캐스팅 연산자 4가지
+// 1) static_cast
+// 2) reinterpret_cast
+// 3) const_cast
+// 4) dynamic_cast
