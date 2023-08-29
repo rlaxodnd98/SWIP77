@@ -13,13 +13,31 @@ class Shape {
     int y;
 
 public:
-    void Draw() const { }
+    virtual void Draw() const { }
+    virtual Shape* Clone() { return nullptr; }
 };
 
 class Rect : public Shape {
     int width;
+
+public:
+    void Draw() const override { }
 };
 
+int main()
+{
+    Shape s;
+    Rect r;
+
+    Shape* p = &s;
+    p->Draw();
+
+    p = &r;
+    p->Draw();
+    p->Clone();
+}
+
+#if 0
 int main()
 {
     Shape s;
@@ -28,3 +46,4 @@ int main()
     Rect r;
     cout << sizeof(r) << endl;
 }
+#endif
