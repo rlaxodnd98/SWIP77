@@ -8,6 +8,12 @@ public:
     void StopRecording() { cout << "Stop Recording" << endl; }
 };
 
+class FHDCamera {
+public:
+    void StartRecording() { cout << "[FHDCamera]Start Recording" << endl; }
+    void StopRecording() { cout << "[FHDCamera]Stop Recording" << endl; }
+};
+
 class Car {
     Camera* camera;
 
