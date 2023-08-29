@@ -13,7 +13,7 @@ public:
 
 // 2) 함수가 객체를 값으로 반환할 때
 
-#if 0
+#if 1
 Sample s; // Sample()
 // 지역 객체는 함수가 끝나면 사라지기 때문에,
 // 참조로 반환하는 것은 미정의 동작이 발생합니다.
@@ -60,7 +60,7 @@ Sample foo()
 //  2) NRVO(Named Return Value Optimization)
 //  - 임시객체를 반환하지 않아도, 최적화됩니다.
 //    MSVC 2022
-#if 1
+#if 0
 Sample foo()
 {
     Sample local;
