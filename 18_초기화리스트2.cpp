@@ -6,7 +6,7 @@ using namespace std;
 // 1) const 멤버
 // 2) reference 멤버
 // 3) 클래스의 멤버 데이터 클래스가 기본 생성자를 제공하지 않는 경우
-#if 0
+#if 1
 class Point {
     int x;
     int y;
