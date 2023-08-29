@@ -47,7 +47,6 @@ int main()
 
 //   1) RVO(Return Value Optimization)
 //   - 임시객체를 반환할 때, 최적화됩니다.
-
 #if 0
 Sample foo()
 {
@@ -61,12 +60,13 @@ Sample foo()
 //  2) NRVO(Named Return Value Optimization)
 //  - 임시객체를 반환하지 않아도, 최적화됩니다.
 //    MSVC 2022
-
+#if 1
 Sample foo()
 {
     Sample local;
     return local;
 }
+#endif
 
 int main()
 {
