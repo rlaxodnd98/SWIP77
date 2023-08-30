@@ -28,7 +28,7 @@ public:
     inline T* operator->() { return obj; }
 };
 
-#if 1
+#if 0
 int main()
 {
     // Ptr p = new Image;
@@ -58,3 +58,31 @@ int main()
     delete p;
 }
 #endif
+
+// C++표준에서 이미 잘 만들어진 스마트 포인터를 제공합니다.
+//  : 자원의 소유권(Ownership)
+// 1) shared_ptr
+//  : 참조 계수 기반
+// 2) unique_ptr
+//   : 복사 금지
+
+#include <memory>
+
+int main()
+{
+    shared_ptr<Image> p { new Image };
+    p->Draw();
+    (*p).Draw();
+
+    shared_ptr other = p;
+
+    unique_ptr<Image> p2 { new Image };
+    p2->Draw();
+    (*p2).Draw();
+
+    cout << p2 << endl;
+
+    unique_ptr<Image> other2 = std::move(p2);
+    cout << other2 << endl;
+    cout << p2 << endl;
+}
