@@ -81,6 +81,17 @@ int main()
         return a > b;
     });
 
+    /*
+    // 위의 람다 표현식을 컴파일러가 클래스를 직접 만들고,
+    // 객체를 생성해서 전달해줍니다.
+    class __Lambda {
+    public:
+        bool operator()(int a, int b) const
+        { return a > b; }
+    };
+    sort(begin(x), end(x), __Lambda());
+    */
+
     for (auto e : x) {
         cout << e << endl;
     }
