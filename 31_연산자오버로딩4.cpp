@@ -52,6 +52,7 @@ public:
     friend istream& operator>>(istream& is, Point& pt);
 };
 
+// 사용자 정의 타입을 입출력하기 위한 연산재 재정의를 제공하는 방법
 ostream& operator<<(ostream& os, const Point& pt)
 {
     return os << pt.x << ", " << pt.y;
