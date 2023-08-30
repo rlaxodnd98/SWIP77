@@ -24,6 +24,23 @@ int main()
 //      의해 결정됩니다.
 //   => extern "C"를 통해서 C++에서 C 컴파일러로 빌드된 함수를 호출하거나, C++ 컴파일러로 빌드된 함수를 C 프로그램에서 호출할 수 있습니다.
 
+// C
+// void foo(void) {}
+// => _foo
+// void foo(int n) {}
+// => _foo
+
+// C++
+// void foo(void) {}
+// => __Z3foov
+// void foo(int n) {}
+// => __Z3fooi
+
+// 핵심: extern "C"를 사용하면, C++에서 C의 함수를 호출할 수 있고,
+//      C에서 C++의 함수를 호출할 수 있습니다.
+// extern "C" void foo(int n) {}
+// => _foo
+
 int square(int x) { return x * x; }
 double square(double x) { return x * x; }
 long long square(long long x) { return x * x; }

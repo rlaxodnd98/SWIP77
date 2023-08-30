@@ -63,13 +63,15 @@ int main()
     if (d > INT_MAX || d < INT_MIN) {
         cout << "Overflow" << endl;
     } else {
-        int n = { (int)d }; // Copy Initialization
+        // int n = { (int)d }; // Copy Initialization
+        int n = { static_cast<int>(d) };
     }
 
     long long l = 100LL;
     if (l > INT_MAX || l < INT_MIN) {
         cout << "Overflow" << endl;
     } else {
-        int n { (int)l }; // Direct Initialization
+        // int n { (int)l }; // Direct Initialization
+        int n { static_cast<int>(l) }; // Direct Initialization
     }
 }

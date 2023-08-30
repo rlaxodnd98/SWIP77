@@ -2,6 +2,11 @@
 #include <iostream>
 using namespace std;
 
+// Decay 예외
+// 1) sizeof
+// 2) &(address)
+// 3) &(reference)
+
 #if 0
 int main()
 {
@@ -9,7 +14,7 @@ int main()
 
     int n = x[0];
 
-    int* p = x;
+    int* p = x; // &x[0]
 
     int(*p2)[3] = &x;
 }
@@ -46,4 +51,12 @@ int main()
 
     const auto c2 = n; // c2 -> const int
     // c2 = 1000;
+
+    int x = 10;
+    int& r = x; // r의 타입은? int&
+
+    // auto r2 = r; // r2의 타입은? int
+    auto& r2 = r; // r2의 타입은? int&
+    r2 = 100;
+    cout << x << endl;
 }
