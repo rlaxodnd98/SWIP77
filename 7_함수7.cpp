@@ -6,7 +6,10 @@ using namespace std;
 // - Trailing Return Type
 
 #if 0
-int add(int a, int b) { return a + b; }
+int add(int a, int b)
+{
+    return a + b;
+}
 
 int (*foo(int a, int b))[3]
 {

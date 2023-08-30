@@ -2,8 +2,11 @@
 #include <iostream>
 using namespace std;
 
-#if 0
-int square(int x) { return x * x; }
+#if 1
+int square(int x)
+{
+    return x * x;
+}
 double square(double x) { return x * x; }
 long long square(long long x) { return x * x; }
 #endif
