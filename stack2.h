@@ -4,8 +4,8 @@
 // #pragma once
 // 표준이 아닙니다.
 
-#ifndef STACK2_H_
-#define STACK2_H_
+// #ifndef STACK2_H_
+// #define STACK2_H_
 
 class Stack {
 public:
@@ -20,4 +20,4 @@ void Stack::Push()
 {
 }
 
-#endif
+// #endif
