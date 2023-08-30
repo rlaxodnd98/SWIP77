@@ -12,8 +12,13 @@ class User {
     char* name;
     int age;
 
+    // 복사 금지
     User(const User& rhs) = delete;
+    User& operator=(const User& rhs) = delete;
+
+    // 이동 금지
     User(User&& rhs) = delete;
+    User& operator=(User&& rhs) = delete;
 
 public:
     User(const char* s, int n)
