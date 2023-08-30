@@ -35,10 +35,13 @@ int main()
 int main()
 {
     int n = 42;
-    xstd::cout << n;
-    // xstd::cout.operator<<(n);
+    std::cout << n;
+    // std::cout.operator<<(n);
+    // std::cout.operator<<(int);
 
     double d = 3.14;
-    xstd::cout << d;
+    std::cout << d;
+    // std::cout.operator<<(d)
+    // std::cout.operator<<(double)
 }
 #endif
