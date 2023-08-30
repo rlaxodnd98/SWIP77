@@ -30,6 +30,15 @@ public:
     {
     }
 
+    // 컴파일러가 제공하는 대입 연산자 형태
+    User& operator=(const User& rhs)
+    {
+        name = rhs.name;
+        age = rhs.age;
+
+        return *this;
+    }
+
     User(const char* s, int n)
         : age { n }
     {
